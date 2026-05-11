@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lakeville, Minnesota | Plan</title>
+  <link rel="stylesheet" href="styles/site.css">
+  <script defer src="scripts/site.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">Lakeville, MN</a>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="history.html">History</a>
+      <a href="places.html">Places</a>
+      <a class="active" href="plan.html">Plan</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="page-title">
+      <p class="eyebrow">Interactive Page</p>
+      <h1>Plan a Lakeville day</h1>
+      <p>Choose a season and activity, then let the page suggest a hometown plan. You can also change the color style and try a short Lakeville quiz.</p>
+    </section>
+
+    <section class="interactive-grid">
+      <form id="dayForm" class="panel">
+        <h2>Build your plan</h2>
+
+        <label for="season">Season</label>
+        <select id="season" name="season">
+          <option value="summer">Summer</option>
+          <option value="fall">Fall</option>
+          <option value="winter">Winter</option>
+          <option value="spring">Spring</option>
+        </select>
+
+        <label for="activity">Activity</label>
+        <select id="activity" name="activity">
+          <option value="lake">Lake day</option>
+          <option value="trail">Trail walk</option>
+          <option value="sports">Sports</option>
+          <option value="history">Local history</option>
+        </select>
+
+        <fieldset>
+          <legend>Page color</legend>
+          <label><input type="radio" name="theme" value="green" checked> Green</label>
+          <label><input type="radio" name="theme" value="blue"> Blue</label>
+          <label><input type="radio" name="theme" value="gold"> Gold</label>
+        </fieldset>
+
+        <label class="checkbox">
+          <input type="checkbox" id="snack"> Add a snack stop
+        </label>
+
+        <button type="submit">Show my plan</button>
+      </form>
+
+      <section class="panel result-panel" aria-live="polite">
+        <h2>Your plan</h2>
+        <p id="planResult">Pick your options and submit the form to see a custom Lakeville plan.</p>
+      </section>
+    </section>
+
+    <section class="quiz panel">
+      <h2>Lakeville quick quiz</h2>
+
+      <form id="quizForm">
+        <label for="quizAnswer">About how many miles of trails and sidewalks does Lakeville list?</label>
+        <select id="quizAnswer">
+          <option value="">Choose an answer</option>
+          <option value="45">45 miles</option>
+          <option value="149">149 miles</option>
+          <option value="300">300 miles</option>
+        </select>
+
+        <button type="submit">Check answer</button>
+      </form>
+
+      <p id="quizResult" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Back to the <a href="index.html">home page</a> or visit the <a href="https://www.lakevillemn.gov/787/Parks-Trails" target="_blank" rel="noopener">official parks and trails page</a>.</p>
+  </footer>
+</body>
+</html>
